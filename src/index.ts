@@ -22,6 +22,4 @@ createConnection(connectionOptions)
 	.then(() => {
 		app.start(appOptions, handleAppStart)
 	})
-	.catch((err) => {
-		console.log(err)
-	})
+	.catch((err) => console.log(err))

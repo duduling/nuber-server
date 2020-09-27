@@ -1,4 +1,4 @@
-import { hash } from 'bcrypt'
+import { compare, hash } from 'bcrypt'
 import { IsEmail } from 'class-validator'
 import {
 	BaseEntity,
@@ -67,6 +67,10 @@ class User extends BaseEntity {
 
 	get fullName(): string {
 		return `${this.firstName} ${this.lastName}`
+	}
+
+	public comparePassword(password: string): Promise<boolean> {
+		return compare(password, this.password)
 	}
 
 	@BeforeInsert()

@@ -10,7 +10,7 @@ class Chat extends BaseEntity {
 	@OneToMany((type) => Message, (message) => message.chat)
 	messages: Message[]
 
-	@OneToMany((type) => User, (user) => user.participants)
+	@OneToMany((type) => User, (user) => user.chat)
 	participants: User[]
 
 	@CreateDateColumn() createdAt: string

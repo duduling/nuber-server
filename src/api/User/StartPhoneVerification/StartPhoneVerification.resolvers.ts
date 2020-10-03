@@ -1,11 +1,10 @@
-import { sendVerificationSMS } from 'src/utils/sendSMS'
-import { ConversationList } from 'twilio/lib/rest/conversations/v1/conversation'
 import Verification from '../../../entities/Verification'
 import {
 	StartPhoneVerificationMutationArgs,
 	StartPhoneVerificationResponse,
 } from '../../../types/graph'
 import { Resolvers } from '../../../types/resolvers'
+import { sendVerificationSMS } from '../../../utils/sendSMS'
 
 const resolvers: Resolvers = {
 	Mutation: {

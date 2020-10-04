@@ -4,7 +4,7 @@ import {
 	EmailSignInResponse,
 } from '../../../types/graph'
 import { Resolvers } from '../../../types/resolvers'
-import createJWT from '../../../utils/creatJWT'
+import createJWT from '../../../utils/createJWT'
 
 const resolvers: Resolvers = {
 	Mutation: {
